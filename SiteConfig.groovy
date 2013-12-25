@@ -84,6 +84,11 @@ published: true
 // Theme configuration
 
 /*
+ * Author name for Copyright, Metadata and RSS feed
+ */
+author = 'John Doe'                 
+
+/*
  * The delimiter for the items on the left side of the related bar.
  * This defaults to ' &raquo;' Each item in the related bar ends
  * with the value of this variable.
@@ -155,3 +160,10 @@ bodyfont = 'sans-serif'
 
 // Font for headings
 headfont = "'Trebuchet MS', sans-serif"
+
+// Show powered by Grain in the footer
+show_grain = true
+
+// Show copyright in the footer
+show_copyright = true
+copyright = "${new Date().format('yyyy')}, $author"
