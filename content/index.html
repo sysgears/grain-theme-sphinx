@@ -1,0 +1,24 @@
+---
+layout: default
+title: Grain Sphinx Theme
+published: true
+---
+<h1>Welcome to Grain Sphinx Theme</h1>
+
+<p>
+    The Grain Sphinx Theme is a starting point for creating documentation sites using
+    Grain.
+</p>
+<h3>
+    Here is the list of the pages, available on this site:
+</h3>
+<ul>
+<% site.pages.each { %>
+  <li>
+    <p><strong>url:</strong> <a href="${it.url}">${site.url}${it.url}</a> <strong>location:</strong> ${it.location}</p>
+  </li>
+<% } %>
+</ul>
+<p>
+    Please, refer to the <a href="http://sysgears.com/grain/docs/latest/">documentation</a> for further details.
+</p>
