@@ -3,13 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 ${include 'header.html'}
 <body>
-    <div class="related">
-        <h3>Navigation</h3>
-        <ul>
-            <li><a href="${pathToRoot(page.url) ?: '#'}">${site.html_short_title}</a>${site.reldelim1}</li>
-        </ul>
-    </div>
-
+    ${include 'navigation.html'}
     <div class="document">
         <div class="documentwrapper">
             <% if (site.render_sidebar) { %>
@@ -25,6 +19,7 @@ ${include 'header.html'}
         <div class="clearer"></div>
         </div>
     </div>
+    ${include 'navigation.html'}
     ${include 'footer.html'}
 </body>
 </html>
