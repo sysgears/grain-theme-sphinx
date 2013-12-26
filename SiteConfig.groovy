@@ -86,7 +86,33 @@ published: true
 /*
  * Author name for Copyright, Metadata and RSS feed
  */
-author = 'John Doe'                 
+author = 'John Doe'
+
+/**
+ * Project name
+ */
+project = 'Sphinx Theme'
+
+/**
+ * The full version, including alpha/beta/rc tags. 
+ */
+release = '0.3.0-SNAPSHOT'
+
+/*
+ * The "title" for HTML documentation.
+ * This is appended to the <title> tag of individual pages, and used in the
+ * navigation bar as the "topmost" element.  It defaults to ${project}
+ * v${revision} documentation, where the placeholders are replaced by the
+ * config values of the same name 
+ */
+html_title = "${project} ${release} documentation"
+
+/*
+ * A shorter "title" for the HTML docs.  This is used in for links in the
+ * header and in the HTML Help docs.  If not given, it defaults to the
+ * value of ${html_title}
+ */
+html_short_title = "${html_title}"
 
 /*
  * The delimiter for the items on the left side of the related bar.
@@ -166,4 +192,12 @@ show_grain = true
 
 // Show copyright in the footer
 show_copyright = true
+
+// Copyright text
 copyright = "${new Date().format('yyyy')}, $author"
+
+// Don’t include the sidebar. Defaults to false.
+nosidebar = false
+
+// The text appended after the page title
+titlesuffix = " &mdash; " + (html_title ?: '')

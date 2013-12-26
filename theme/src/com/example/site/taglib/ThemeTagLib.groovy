@@ -14,6 +14,15 @@ class ThemeTagLib {
     }
 
     /**
+     * Returns relative path from the page to root of the site
+     * 
+     * @attr location page location
+     */
+    def pathToRoot = { String location ->
+        '../' * (location.count('/') - 1)
+    }
+
+    /**
      * Generates html tag for an image
      *
      * @attr location image location

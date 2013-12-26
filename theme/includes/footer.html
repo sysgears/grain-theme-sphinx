@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="footer">
+  <% if (site.show_copyright) { %>
+     &copy; Copyright ${site.copyright}.
+  <% } %>
+  <% if (site.show_grain) { %>
+    <span class="credit">Powered by <a href="http://sysgears.com/grain/">Grain</a></span>
+  <% } %>
+  <% if (page.last_updated) { %>
+     <br/>Last updated on ${page.last_updated}
+  <% } %>
+</div>
