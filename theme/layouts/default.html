@@ -4,17 +4,19 @@
 ${include 'header.html'}
 <body>
     ${include 'navigation.html'}
+    <% System.out.println site.render_sidebar %>
     <div class="document">
         <div class="documentwrapper">
-            <% if (site.render_sidebar) { %>
-                <div class="bodywrapper">
-            <% } %>
-            <div class="body">
-                ${content}
-            </div>
-            <% if (site.render_sidebar) { %>
+            <div class="bodywrapper">
+                <div class="body">
+                    ${content}
                 </div>
-            <% } %>
+            </div>
+        </div>
+        <div class="sphinxsidebar">
+            <div class="sphinxsidebarwrapper">
+                <h3><a href="#">Table Of Contents</a></h3>
+            </div>
         </div>
         <div class="clearer"></div>
         </div>
