@@ -24,8 +24,14 @@ class ResourceMapper {
         def refinedResources = resources.findResults(filterPublished).collect { Map resource ->
             fillDates << resource
         }
-
-        refinedResources
+        
+        refinedResources.collect { Map it ->
+            if (it.location.matches(/.*\.(md|markdown|rst)$/)) {
+                it + [layout: 'default', url: it.url.replaceAll(/\.(md|markdown|rst)$/, '/')]
+            } else {
+                it
+            }
+        }
     }
 
     /**
